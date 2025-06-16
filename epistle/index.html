@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Letter</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="title" content="Confession">
+        <meta name="description" content="A message that conveys feelings of love and affection.">
+
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.2/markdown-it.min.js"></script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                margin: 0;
+            }
+
+            body, html {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: #6BAED6;
+            }
+
+            #message-container {
+                background-color: #C6DBEF;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.455);
+
+                transition: height 1.5s ease-in-out;
+            }
+            #message {
+                font-family: 'Dancing Script', cursive;
+                font-size: 1.2rem;
+                line-height: 1.6;
+                color: #333;
+                text-align: center;
+                padding: 1rem;
+                overflow-y: auto;
+            }
+            
+        </style>
+
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="flex justify-center items-center flex-col w-[100vw] h-[100vh]">
+            <div id="message-container" class="flex-col items-center hidden h-0 overflow-y-hidden max-h-[80vh] max-w-[50vw] max-md:max-w-[70vw] max-sm:max-w-[80vw] max-sm:max-h-[80vh] py-5">
+                <div class="w-[90%] mb-auto mt-auto">
+                    <article id="message" class="prose"></article>
+                </div>
+            </div>
+
+            <div class="heart-container" class="mt-2">
+                <i id="solid-heart" class="fa-solid fa-heart fa-beat fa-2x" style="color: #ff0000;"></i>
+            </div>
+        </div>
+    </body>
+</html>
